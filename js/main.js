@@ -82,9 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pillarHeads.forEach(head => {
       head.addEventListener('click', () => {
         const card = head.closest('.pillar-card');
-        const wasOpen = card.classList.contains('open');
-        document.querySelectorAll('.pillar-card.open').forEach(c => c.classList.remove('open'));
-        if (!wasOpen) card.classList.add('open');
+        card.classList.toggle('open');
       });
     });
 
